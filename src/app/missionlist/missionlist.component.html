@@ -1,12 +1,13 @@
 <div>
     <mat-card *ngFor="let mission1 of themissions">
         <mat-card-header>
-            <img mat-card-sm-image ng-src="{{mission1.mission_patch_small">
+            <img mat-card-md-image src="{{ mission1.mission_patch_small }}">
             <mat-card-title> {{ mission1.mission_name}}</mat-card-title>
             <mat-card-subtitle>{{ mission1.launch_year }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
             <p>{{ mission1.details }}</p>
+            <p>Mission patch: {{ mission1.mission_patch_small }}</p>
         </mat-card-content>
     </mat-card>
 </div>

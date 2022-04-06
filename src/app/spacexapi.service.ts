@@ -11,8 +11,8 @@ export class SpacexapiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getMissions(): Observable<Mission[]> {
-    return this.httpClient.get<Mission[]>(this.REST_API);
+  public getMissions() {
+    return this.httpClient.get(this.REST_API);
   }
 
   public getMissionById(id: String) {

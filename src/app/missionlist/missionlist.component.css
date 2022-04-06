@@ -1,10 +1,11 @@
-div {
-    border-bottom: 2px solid blue;
-    background-color: lightblue;
-}
 
 mat-card {
     border-bottom: 2px solid blue;
     background-color: lightblue;
+    margin-bottom: 10px;
     
+}
+
+mat-card-header {
+    display: flex;
 }

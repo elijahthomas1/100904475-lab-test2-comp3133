@@ -3,6 +3,9 @@ export interface Mission {
     launch_year:string, 
     mission_name: string, 
     details: string,
-    mission_patch_small: string,
+    links: {
+        mission_patch_small: string,
+    }
+    
 }
 

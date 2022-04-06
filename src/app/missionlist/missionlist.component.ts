@@ -10,7 +10,7 @@ import { Mission } from '../mission';
 })
 export class MissionlistComponent implements OnInit, OnDestroy {
 
-  themissions: Mission[] = [];
+  themissions: Mission[]  = [];
   destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(private spaceService: SpacexapiService) { }

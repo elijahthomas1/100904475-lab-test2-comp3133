@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,  HttpParams } from '@angular/common/http';
+import { Mission } from './mission';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +11,8 @@ export class SpacexapiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getMissions() {
-    return this.httpClient.get(this.REST_API);
+  public getMissions(): Observable<Mission[]> {
+    return this.httpClient.get<Mission[]>(this.REST_API);
   }
 
   public getMissionById(id: String) {

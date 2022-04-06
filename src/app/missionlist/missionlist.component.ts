@@ -16,12 +16,16 @@ export class MissionlistComponent implements OnInit, OnDestroy {
   constructor(private spaceService: SpacexapiService) { }
 
   ngOnInit(): void {
+    
+    
     this.spaceService.getMissions()
     .subscribe((res: any) => {
       console.log(res);
-      this.themissions = res.data;
+      console.log(this.themissions)
+      this.themissions = res;
       console.log(this.themissions)
     })
+    
     
   }
   
